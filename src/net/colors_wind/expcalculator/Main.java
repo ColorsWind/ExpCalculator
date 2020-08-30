@@ -8,9 +8,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while(scanner.hasNextLine()) {
             TokenAnalyzer analyzer = new TokenAnalyzer(scanner.nextLine());
-            Parser parser = new Parser(analyzer);
+            ExtendParser parser = new ExtendParser(analyzer);
             parser.advance();
             parser.processE();
+            if (parser.getToken().getType() != TokenType.END)
+                throw new IllegalArgumentException();
         }
     }
 }
