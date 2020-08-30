@@ -1,5 +1,7 @@
 package net.colors_wind.expcalculator;
 
+import java.util.Objects;
+
 public final class Token {
 
     private final TokenType type;
@@ -16,6 +18,10 @@ public final class Token {
 
     public Object getObj() {
         return obj;
+    }
+
+    public boolean isTokenEquals(Object obj) {
+        return Objects.equals(obj, this.obj);
     }
 
     @Override

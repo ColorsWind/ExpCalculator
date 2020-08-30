@@ -53,7 +53,7 @@ FIRST(F)  = {(,N}
 FOLLOW(E)  = {#,)}
 FOLLOW(E') = {#,)}
 FOLLOW(T)  = {+,#,)}
-FOLLOW(T') = {+,#})
+FOLLOW(T') = {+,#,)}
 FOLLOW(F)  = {*,+,#,)}
 ```
 
